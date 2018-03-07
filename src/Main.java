@@ -72,5 +72,9 @@ public class Main {
 		StringWorker<String, Customer> swc = new StringWorker<String, Customer>("Hallo", gCustomer1);
 		System.out.println(swc.toString());
 		
+		// Test generic Method - getString
+		System.out.println(StringWorker.getString("HALLO", gCustomer2));
+		System.out.println(StringWorker.getString2("HALLO", gCustomer2));
+		
 	}
 }
