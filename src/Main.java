@@ -46,8 +46,9 @@ public class Main {
 		// Problem 1 solved by Generics, no need to cast
 		Iterator<Customer> it2 = gCustomers.iterator();
 		while (it2.hasNext()) {
-//			Customer customerNext = it2.next(); // this casting 'problem' is solved by Generics
-//			System.out.println(customerNext.getName());
+			// Customer customerNext = it2.next(); // this casting 'problem' is solved by
+			// Generics
+			// System.out.println(customerNext.getName());
 			System.out.println(it2.next().getName());
 
 		}
@@ -59,5 +60,17 @@ public class Main {
 		for (Customer nextCustomer : gCustomers) {
 			System.out.println(nextCustomer.getName());
 		}
+
+		// Test Generic class StringWorker (defined by myself)
+
+		StringWorker<String, String> sw = new StringWorker<String, String>("hallo", "world");
+		System.out.println(sw.toString());
+
+		StringWorker<String, Integer> swi = new StringWorker<String, Integer>("hallo", 123);
+		System.out.println(swi.toString());
+
+		StringWorker<String, Customer> swc = new StringWorker<String, Customer>("Hallo", gCustomer1);
+		System.out.println(swc.toString());
+		
 	}
 }
